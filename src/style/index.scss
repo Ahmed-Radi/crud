@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Cairo:wght@400;600&display=swap');
+@import './Variables.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Almarai', sans-serif;
+    font-family: 'Cairo', sans-serif;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+button {
+    // reset to default
+    font-family: inherit;
+    outline: none;
+    border: none;
+    background: none;
+    letter-spacing: inherit;
+    color: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    padding: 0;
+}

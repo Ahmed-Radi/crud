@@ -1,0 +1,19 @@
+{
+    "name": "json-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "json-server --watch userData.json --port 4000"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "json-server": "^0.17.1"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.2.6"
+    }
+}

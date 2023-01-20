@@ -1,0 +1,63 @@
+@import '../../style/Variables.scss';
+
+.loading {
+    @include api_response()
+}
+
+.error {
+    @include api_response($color: $text-red)
+}
+
+.table_container {
+    padding: 20px 0;
+
+    @media (max-width: 768px) {
+        overflow-x: scroll;
+    }
+}
+
+.table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: $primary;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+        background-color: lighten(#f2f2f2, 10%);
+    }
+
+    tr:hover {
+        background-color: lighten($primary, 30%);
+        color: #fff;
+    }
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        width: 900px;
+    }
+}
+
+.update_button {
+    @include button($color: $text-dark, $background: $button-bg);
+    margin-right: 10px;
+}
+
+.delete_button {
+    @include button($color: $text-white, $background: $danger, $hoverBg: $primary);
+}
