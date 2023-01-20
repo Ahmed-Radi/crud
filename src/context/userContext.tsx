@@ -31,7 +31,6 @@ const MenuContextProvider = ({ children }: { children: React.ReactNode }) => {
     // select user dependant on id
     const handleSelectUser =  (id: number) => {
         data.filter((user: User) => user.id === id)
-        console.log('id', id)
         setSelectedUser(prev => prev = data.filter((user: User) => user.id === id))
     };
 
