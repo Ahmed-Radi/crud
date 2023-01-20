@@ -32,7 +32,6 @@ function Table() {
 
     // Select user to set user data into form to update
     const handleUpdate = (id: number) => {
-        console.log('id', id)
         handleSelectUser(id);
     }
 

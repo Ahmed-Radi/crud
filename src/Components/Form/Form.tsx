@@ -23,11 +23,9 @@ function Form() {
             emailRef.current!.value = '';
             passwordRef.current!.value = '';
             queryClient.invalidateQueries(["user"])
-            console.log('selectedUser[0].id === data.data.id', data.data, selectedUser[0] , loginUser)
             if (selectedUser[0].id === loginUser.id) {
                 setLoginUser(data.data)
             }
-            console.log('loginUser',loginUser)
             setSelectedUser('')
         }
     })
