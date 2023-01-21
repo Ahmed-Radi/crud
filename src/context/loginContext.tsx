@@ -1,6 +1,5 @@
 import React, { createContext, useState } from 'react';
 import { User } from "../Model/User";
-import { useNavigate } from 'react-router-dom';
 
 interface userInterface {
     loginUser: User;
@@ -21,8 +20,6 @@ const menuDefaultValue = {
 export const userLoginContext = createContext<userInterface>(menuDefaultValue)
 
 const LoginUserContextProvider = ({ children }: { children: React.ReactNode }) => {
-
-    const navigate = useNavigate();
 
     const [loginUser, setLoginUser] = useState<User>(menuDefaultValue.loginUser)
 
