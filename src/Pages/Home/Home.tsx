@@ -12,7 +12,7 @@ function Home() {
 
     useEffect(() => {
         // check in mount phase is there a login user or not
-        if (!loginUser || loginUser.id === 0) {
+        if (loginUser.id === 0 && loginUser.name === '') {
             navigate('/')
         }
     }, [loginUser, navigate])

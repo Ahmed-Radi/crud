@@ -6,15 +6,16 @@ interface userInterface {
     loginUser: User;
     setLoginUser: (selectedUser: User) => void;
 }
+const user = localStorage.getItem("user");
 
 const menuDefaultValue = {
-    loginUser: {
+    loginUser: user ? JSON.parse(user) : {
         id: 0,
         email: '',
         name: '',
         password: '',
     },
-    setLoginUser: (selectedUser: User) => {}
+    setLoginUser: (selectedUser: User) => { },
 }
 
 export const userLoginContext = createContext<userInterface>(menuDefaultValue)
@@ -27,14 +28,11 @@ const LoginUserContextProvider = ({ children }: { children: React.ReactNode }) =
 
     React.useEffect(() => {
         // get user data from local storage
-        const user = localStorage.getItem("user");
         if (user) {
             // if user exist add user data into state to use it
             setLoginUser(JSON.parse(user))
-        } else {
-            navigate('/')
         }
-    }, [navigate])
+    }, [])
 
     const value = { loginUser, setLoginUser }
 
