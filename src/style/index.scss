@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Cairo:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import './Shared.scss';
 
 * {
@@ -7,9 +8,12 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Almarai', sans-serif;
-    font-family: 'Cairo', sans-serif;
+body[lang="en"] {
+    font-family: 'Roboto', sans-serif; /* English font family */
+}
+
+body[lang="ar"] {
+    font-family: 'Cairo', sans-serif; /* Arabic font family */
 }
 
 code {
@@ -33,4 +37,8 @@ button {
     font-size: inherit;
     text-align: inherit;
     padding: 0;
+}
+
+input {
+    font-family: inherit;
 }

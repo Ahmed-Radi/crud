@@ -93,7 +93,7 @@ function Form() {
                     <span>{t('password')}</span>
                     <input name="password" dir={language === 'ar' ? 'rtl' : 'auto'} type="password" className={error && !passwordRef.current!.value ? `${styles.form_content__input} ${styles.showError}` : `${styles.form_content__input}`} placeholder={`${t('password')}`} ref={passwordRef} onChange={(e) => handleOnChange(e)} value={selectedUser[0]?.password} />
                 </label>
-                <button className={styles.submit_button} disabled={isLoading}>{isLoading ? t('loading') : t('submit')}</button>
+                <button className={styles.submit_button} disabled={isLoading}>{isLoading ? t('loading...') : t('submit')}</button>
                 <button className={styles.clear_button} onClick={(e: any) => handleClear(e)}>{t('Clear')}</button>
             </form>
         </div>

@@ -56,9 +56,13 @@ function Navbar() {
                                 <NavLink onClick={menuToggler} to={`/home`}>{t('Home')}</NavLink>
                             </li>
                         }
-                        <li>
-                            <NavLink onClick={menuToggler} to={`/register`}>{t('Register')}</NavLink>
-                        </li>
+                        {
+                            loginUser?.name ?
+                                <></>
+                            :   <li>
+                              <NavLink onClick={menuToggler} to={`/register`}>{t('Register')}</NavLink>
+                            </li>
+                        }
                         {
                             loginUser?.name ? <li>
                                 <span className={styles.logout} onClick={handleLogout}>

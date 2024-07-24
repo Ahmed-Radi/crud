@@ -103,6 +103,7 @@
         font-weight: 600;
         cursor: pointer;
         text-align: center;
+        line-height: 25px;
         @include button($background: $success, $hoverBg: $primary);
     }
 }
